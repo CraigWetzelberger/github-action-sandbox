@@ -4,8 +4,13 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
+    container: node:16
     steps:
-      # - uses: actions/checkout@v2
-      # - uses: actions/setup-node@v1
-    - run: npm install
-    - run: npm index.js
+      - run: node --version
+        name: Check Node Version
+      - run: npm --version
+        name: Check NPM Version
+        #- uses: actions/checkout@v2
+        #- uses: actions/setup-node@v1
+        #- run: npm install
+        #- run: node index.js

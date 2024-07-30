@@ -2,10 +2,15 @@
   "name": "github-action-sandbox",
   "version": "1.0.0",
   "main": "index.js",
+  "type" : "module",
   "scripts": {
     "test": "test"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.4"
+  }
 }

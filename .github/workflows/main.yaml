@@ -26,7 +26,7 @@ jobs:
       image: ruby:3.3-alpine
     steps:
     steps:
-      - uses: actions/checkout@v3
+      #- uses: actions/checkout@v3
       #- run: bundle install
       #- run: bundle exec rake test
       - run: ruby -v

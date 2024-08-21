@@ -1,4 +1,4 @@
-name: CI
+name: Sandbox
 on: push
 
 jobs:
@@ -13,4 +13,10 @@ jobs:
         name: Check NPM Version
         #- uses: actions/setup-node@v1
       - run: npm install
+      - run: npx tsc
       - run: node index.js
+      # - name: add label
+      #   uses: actions-ecosystem/action-add-labels@v1
+      #   if: ${{ startsWith(github.event.comment.body, '/add-labels') }}
+      #   with:
+      #     labels: bug

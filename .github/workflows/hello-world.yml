@@ -15,12 +15,12 @@ jobs:
         env:
           RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
       - uses: actions/checkout@v4
-      - id: foo
+      - id: coo
         uses: CraigWetzelberger/hello-world-composite-action/example@main
         with:
           who-to-greet: 'Mr. Meowgi'
       - run: echo out "SOMETHING"
         shell: bash
         env:
-          RANDOM_NUMBER: ${{ steps.foo.outputs.out }}
+          RANDOM_NUMBER: ${{ steps.coo.outputs.out }}
 

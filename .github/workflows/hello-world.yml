@@ -19,8 +19,8 @@ jobs:
         uses: CraigWetzelberger/hello-world-composite-action/example@main
         with:
           who-to-greet: 'Mr. Meowgi'
-      - run: echo out "SOMETHING"
+      - run: echo otherrandom "$RANDOM_NUMBER"
         shell: bash
         env:
-          RANDOM_NUMBER: ${{ steps.coo.outputs.out }}
+          RANDOM_NUMBER: ${{ steps.coo.outputs.otherrandom }}
 

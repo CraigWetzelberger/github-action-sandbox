@@ -15,5 +15,13 @@ jobs:
       #  env:
       #    RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
       #- uses: actions/checkout@v4
-      - uses: CraigWetzelberger/hello-world-composite-action/example@main
+      #
+      # Works:
+      #- uses: CraigWetzelberger/hello-world-composite-action/example@main
+      #
+      #
+      #
+      - uses: CraigWetzelberger/hello-world-composite-action/excomment@main
+        with:
+          github_access_token: 'Mona the Octocat'
 

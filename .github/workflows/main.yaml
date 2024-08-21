@@ -1,34 +1,22 @@
-#name: CI
-#on: push
-#
-#jobs:
-#  test:
-#    runs-on: ubuntu-latest
-#    container: node:20
-#    steps:
-#      - uses: actions/checkout@v2
-#      - run: node --version
-#        name: Check Node Version
-#      - run: npm --version
-#        name: Check NPM Version
-#        #- uses: actions/setup-node@v1
-#      - run: npm install
-#      - run: node index.js
-
-name: Ruby Test
+name: Sandbox
 on: push
 
 jobs:
   test:
-    # https://github.com/ruby/docker-images
     runs-on: ubuntu-latest
-    container:
-      image: ruby:3.3-alpine
+    container: node:20
     steps:
-    steps:
-      #- uses: actions/checkout@v3
-      #- run: bundle install
-      #- run: bundle exec rake test
-      - run: ruby -v
-        name: Check Ruby Version
-
+      - uses: actions/checkout@v2
+      - run: node --version
+        name: Check Node Version
+      - run: npm --version
+        name: Check NPM Version
+        #- uses: actions/setup-node@v1
+      - run: npm install
+      - run: npx tsc
+      - run: node index.js
+      # - name: add label
+      #   uses: actions-ecosystem/action-add-labels@v1
+      #   if: ${{ startsWith(github.event.comment.body, '/add-labels') }}
+      #   with:
+      #     labels: bug

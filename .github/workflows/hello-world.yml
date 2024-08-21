@@ -1,4 +1,10 @@
-on: [push]
+#on: [push]
+on:
+  # Trigger the workflow on push or pull request
+  pull_request:
+    branches:
+      - master
+      - develop
 
 jobs:
   hello_world_job:
@@ -23,5 +29,5 @@ jobs:
       #
       - uses: CraigWetzelberger/hello-world-composite-action/excomment@main
         with:
-          github_access_token: 'Mona the Octocat'
+          github_access_token:  ${{ secrets.GITHUB_TOKEN }}
 

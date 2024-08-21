@@ -14,7 +14,6 @@ jobs:
       #  shell: bash
       #  env:
       #    RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
-      - uses: actions/checkout@v4
-      - id: coo
-        uses: CraigWetzelberger/hello-world-composite-action/example@main
+      #- uses: actions/checkout@v4
+      - uses: CraigWetzelberger/hello-world-composite-action/example@main
 
